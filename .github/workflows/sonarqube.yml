@@ -37,10 +37,6 @@ jobs:
         path: ~/.sonar/cache
         key: ${{ runner.os }}-sonar
 
-    - name: Verify Gradle Wrapper
-      run: |
-        ./gradlew --version
-
     - name: SonarQube Scan
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
